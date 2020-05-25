@@ -5,21 +5,25 @@
   width: 100%;
   height: 90px;
   border-bottom: 1px solid #ebebeb;
+  background-color: $color-primario;
 }
 .nav--header ul {
-  display: flex;
+  display: none;
   padding-top: 35px;
   li {
     list-style: none;
     margin-right: 50px;
   }
   a {
-    color: $color-variacion;
+    color: $color-claro;
     @include titulos($Fuente2);
+  }
+  @include media(desktop-s) {
+    display: flex;
   }
 }
 .header__busqueda {
-  display:flex;
+  display: none;
   margin-left: auto;
   padding-top: 35px;
   &:hover {
@@ -28,10 +32,31 @@
   i {
     font-size: 20px;
     margin-right: 10px;
-    color: $color-secundario;
+    color: $color-claro;
+    margin-top: 3px;
   }
   span {
-    color: $color-variacion;
+    color: $color-claro;
     @include titulos($Fuente2);
+  }
+  @include media(desktop-s) {
+    display: flex;
+
+  }
+}
+.header__burguer {
+  margin-left: auto;
+  padding-top: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    font-size: 50px;
+    margin-right: 10px;
+    color: $color-secundario;
+    
+  }
+  @include media(desktop-s) {
+    display: none;
   }
 }
